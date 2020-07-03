@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--Created with JFLAP 7.1.--><structure>
+	<type>fa</type>
+	<automaton>
+		<!--The list of states.-->
+		<state id="0" name="q0">
+			<x>198.0</x>
+			<y>197.0</y>
+			<label>a=ain b=bin</label>
+		</state>
+		<state id="1" name="q1">
+			<x>389.0</x>
+			<y>184.0</y>
+			<label>a=a b=b</label>
+		</state>
+		<state id="2" name="q2">
+			<x>507.0</x>
+			<y>361.0</y>
+			<label>a=a b=b</label>
+		</state>
+		<state id="3" name="q3">
+			<x>511.0</x>
+			<y>527.0</y>
+			<label>a=a-b</label>
+		</state>
+		<state id="4" name="q4">
+			<x>646.0</x>
+			<y>393.0</y>
+			<label>b = b-a</label>
+		</state>
+		<state id="5" name="q5">
+			<x>814.0</x>
+			<y>194.0</y>
+			<label>result = a</label>
+		</state>
+		<!--The list of transitions.-->
+		<transition>
+			<from>4</from>
+			<to>1</to>
+			<read/>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>4</to>
+			<read>!(a&gt;b)</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>2</to>
+			<read>a!=b</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>3</to>
+			<read>a&gt;b</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read/>
+		</transition>
+		<transition>
+			<from>3</from>
+			<to>1</to>
+			<read/>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>5</to>
+			<read>a==b</read>
+		</transition>
+	</automaton>
+</structure>
